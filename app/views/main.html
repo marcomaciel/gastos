@@ -11,6 +11,43 @@
         #{get 'moreScripts' /}
     </head>
     <body>
-        #{doLayout /}
+        <div id="pagewidth" >
+			<div id="headerbar">
+				<div id="headercol">
+
+					<div id="logo">
+						<h3><a href="/">Meus Gastos Diários 2.0</a></h3>
+					</div>
+					<div id="headerlink">
+
+						#{if user}
+								${user} <span class="sep">|</span> <a href="@{Application.logout()}">Logout</a>
+						#{/if}
+						#{else}
+							<a href="@{Application.login()}">Login</a>
+
+						#{/else}
+					</div>
+				</div>
+			</div>
+			<div id="wrapper" class="clearfix">
+
+					<div id="maincol">
+						#{if flash.error}
+							<p class="error">${flash.error}</p>
+						#{/if}
+						#{if flash.success}
+							<p class="success">${flash.success}</p>
+
+						#{/if}
+				        #{doLayout /}
+					</div>
+			</div>
+			<div id="footer">
+				<p> Copyright &copy; ${new Date().format('yyyy')}
+ 					<a href="http://gastos20.appspot.com">Meus Gastos 2.0</a> </p>
+
+			</div>
+		</div>
     </body>
 </html>

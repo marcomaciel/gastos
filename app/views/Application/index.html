@@ -1,4 +1,21 @@
-#{extends 'main.html' /}
-#{set title:'Home' /}
+#{extends 'main.html' /} #{set title:'Meus Gastos Di‡rios 2.0 - Controle
+seus gastos facilmente' /}
 
-#{welcome /}
+<center>
+	<table width="900px">
+		<tr>
+			<td width="450px">
+				<p>
+					<em>Meus Gastos Di‡rios 2.0</em> Controle seus gastos facilmente.
+					N‹o precisa se cadastrar. Basta usar sua conta do Google (ou google para empresas).
+					Meus Gastos Di‡rios 2.0 utiliza <a href="http://pt.wikipedia.org/wiki/OpenID"
+						rel="nofollow" target="_blank">OpenID</a> para autenticar seus usu‡rios.
+					ƒ seguro e com isso n‹o precisamos armazenar seus dados de usu‡rio.
+				</p></td>
+			<td width="350px" align="right">
+				<div id="welcome">
+					<a href="@{Application.login()}">Autentique-se usando sua conta do Google</a>
+				</div></td>
+		</tr>
+	</table>
+</center>
